@@ -1,0 +1,193 @@
+import type { Module } from "../types";
+import { REFS, authored } from "./_shared";
+
+export const MODULE_FOUNDATIONS: Module = {
+  id: "m01",
+  slug: "foundations",
+  order: 1,
+  level: 1,
+  title: { en: "Foundations of the ECG", nl: "Grondslagen van het ECG" },
+  description: {
+    en: "From ion channels to the 12-lead tracing: what the ECG measures, how the leads look at the heart and how to read every ECG the same way.",
+    nl: "Van ionkanalen tot het 12-afleidingen-ECG: wat het ECG meet, hoe de afleidingen naar het hart kijken en hoe u elk ECG op dezelfde manier beoordeelt.",
+  },
+  competencies: ["systematic-approach", "rate-rhythm", "axis", "intervals"],
+  summativeTestSlug: "foundations-test",
+  review: authored([REFS.aha2009]),
+  lessons: [
+    {
+      id: "m01-l01",
+      slug: "electrophysiology-and-leads",
+      level: 1,
+      estimatedMinutes: 20,
+      title: { en: "Electrophysiology and the lead system", nl: "Elektrofysiologie en het afleidingensysteem" },
+      summary: {
+        en: "Why the ECG looks the way it does: the cardiac dipole, depolarisation sequence and the 12 viewing angles.",
+        nl: "Waarom het ECG eruitziet zoals het eruitziet: de cardiale dipool, de depolarisatievolgorde en de 12 kijkhoeken.",
+      },
+      competencies: ["systematic-approach"],
+      objectives: [
+        { id: "o1", competency: "systematic-approach", text: { en: "Explain the ECG as the projection of a moving cardiac dipole onto each lead axis.", nl: "Het ECG verklaren als de projectie van een bewegende cardiale dipool op elke afleidingsas." } },
+        { id: "o2", competency: "systematic-approach", text: { en: "Describe the normal activation sequence and relate it to P, QRS and T.", nl: "De normale activatievolgorde beschrijven en relateren aan P, QRS en T." } },
+        { id: "o3", competency: "axis", text: { en: "Place the six limb leads on the hexaxial reference system and the six chest leads in the horizontal plane.", nl: "De zes extremiteitsafleidingen plaatsen op het hexaxiale systeem en de zes borstafleidingen in het horizontale vlak." } },
+      ],
+      blocks: [
+        { type: "heading", text: { en: "The heart as a moving dipole", nl: "Het hart als bewegende dipool" } },
+        { type: "paragraph", text: {
+          en: "At any instant, the depolarising myocardium can be summarised as a single electrical vector: the cardiac dipole. A lead is simply a direction from which we observe this vector. When the dipole points towards the positive electrode of a lead the tracing deflects upwards; when it points away, downwards; when it is perpendicular, the tracing is isoelectric. Every rule you will learn about axis, R-wave progression and reciprocal change follows from this single idea.",
+          nl: "Op elk moment kan het depolariserende myocard worden samengevat als één elektrische vector: de cardiale dipool. Een afleiding is niets anders dan een richting van waaruit we die vector bekijken. Wijst de dipool naar de positieve elektrode van een afleiding, dan slaat de registratie omhoog uit; wijst hij ervan af, dan omlaag; staat hij loodrecht, dan is de registratie iso-elektrisch. Elke regel over hartas, R-progressie en reciproke veranderingen volgt uit dit ene principe.",
+        } },
+        { type: "heading", text: { en: "Activation sequence", nl: "Activatievolgorde" } },
+        { type: "list", ordered: true, items: [
+          { en: "Sinus node → atria (right before left): the P wave. Vector points left, inferior and slightly anterior.", nl: "Sinusknoop → atria (rechts vóór links): de P-top. De vector wijst naar links, inferieur en licht anterieur." },
+          { en: "AV node and His bundle: slow conduction, electrically silent — the PR segment.", nl: "AV-knoop en bundel van His: trage geleiding, elektrisch stil — het PR-segment." },
+          { en: "Septum, left to right: the small initial vector that gives the septal q in lateral leads and the r in V1.", nl: "Septum, van links naar rechts: de kleine initiële vector die de septale q in de laterale afleidingen en de r in V1 geeft." },
+          { en: "Free walls, apex to base; the thick left ventricle dominates: the main R vector points left, inferior and posterior.", nl: "Vrije wanden, van apex naar basis; de dikke linkerkamer domineert: de hoofd-R-vector wijst naar links, inferieur en posterieur." },
+          { en: "Basal segments last: the terminal S vector, rightward and superior.", nl: "Basale segmenten als laatste: de terminale S-vector, naar rechts en superieur." },
+          { en: "Repolarisation from epicardium to endocardium produces a T wave that is normally concordant with the QRS.", nl: "Repolarisatie van epicard naar endocard geeft een T-top die normaal concordant is met het QRS." },
+        ] },
+        { type: "heading", text: { en: "Twelve viewing angles", nl: "Twaalf kijkhoeken" } },
+        { type: "table", caption: { en: "Lead axes in the frontal (limb) and horizontal (chest) planes", nl: "Afleidingsassen in het frontale (extremiteiten) en horizontale (borst) vlak" },
+          header: [{ en: "Lead", nl: "Afleiding" }, { en: "Angle / position", nl: "Hoek / positie" }, { en: "Looks at", nl: "Kijkt naar" }],
+          rows: [
+            [{ en: "I", nl: "I" }, { en: "0°", nl: "0°" }, { en: "Lateral wall", nl: "Laterale wand" }],
+            [{ en: "II", nl: "II" }, { en: "+60°", nl: "+60°" }, { en: "Inferior wall", nl: "Onderwand" }],
+            [{ en: "III", nl: "III" }, { en: "+120°", nl: "+120°" }, { en: "Inferior wall", nl: "Onderwand" }],
+            [{ en: "aVR", nl: "aVR" }, { en: "−150°", nl: "−150°" }, { en: "Right atrium / cavity", nl: "Rechter atrium / holte" }],
+            [{ en: "aVL", nl: "aVL" }, { en: "−30°", nl: "−30°" }, { en: "High lateral wall", nl: "Hoog-laterale wand" }],
+            [{ en: "aVF", nl: "aVF" }, { en: "+90°", nl: "+90°" }, { en: "Inferior wall", nl: "Onderwand" }],
+            [{ en: "V1–V2", nl: "V1–V2" }, { en: "4th intercostal space, parasternal", nl: "4e intercostaalruimte, parasternaal" }, { en: "Septum / right ventricle", nl: "Septum / rechterkamer" }],
+            [{ en: "V3–V4", nl: "V3–V4" }, { en: "Between V2 and V5 / 5th ICS mid-clavicular", nl: "Tussen V2 en V5 / 5e ICR midclaviculair" }, { en: "Anterior wall", nl: "Voorwand" }],
+            [{ en: "V5–V6", nl: "V5–V6" }, { en: "Anterior / mid-axillary line, level of V4", nl: "Voorste / midaxillaire lijn, niveau V4" }, { en: "Lateral wall", nl: "Laterale wand" }],
+          ] },
+        { type: "callout", tone: "pitfall", title: { en: "Electrode placement", nl: "Elektrodeplaatsing" }, text: {
+          en: "Placing V1–V2 too high (2nd–3rd intercostal space) creates rSr′ patterns, pseudo-anterior Q waves and even Brugada-like ST elevation. Arm-lead reversal inverts lead I and makes aVR look 'normal'. Check placement before you interpret.",
+          nl: "Te hoog plaatsen van V1–V2 (2e–3e intercostaalruimte) geeft rSr′-patronen, pseudo-anterieure Q-golven en zelfs Brugada-achtige ST-elevatie. Verwisseling van de armelektroden inverteert afleiding I en laat aVR 'normaal' lijken. Controleer de plaatsing voordat u interpreteert.",
+        } },
+        { type: "ecg", ecgId: "ptbxl-00003", layout: "3x4+rhythm", caption: { en: "A normal 12-lead ECG. Trace the dipole in your mind: upright in I, II and V5–V6, negative in aVR, transition in V3–V4.", nl: "Een normaal 12-afleidingen-ECG. Volg de dipool in gedachten: positief in I, II en V5–V6, negatief in aVR, transitie in V3–V4." } },
+        { type: "check", question: {
+          id: "m01-l01-q1", kind: "single", competency: "systematic-approach", level: 1,
+          stem: { en: "The main QRS vector of a normal heart points left, inferior and posterior. Which lead therefore shows a predominantly negative QRS?", nl: "De hoofd-QRS-vector van een normaal hart wijst naar links, inferieur en posterieur. Welke afleiding toont daarom een overwegend negatief QRS?" },
+          options: [
+            { id: "a", text: { en: "Lead II", nl: "Afleiding II" }, correct: false, rationale: { en: "Lead II (+60°) lies close to the vector and is strongly positive.", nl: "Afleiding II (+60°) ligt dicht bij de vector en is sterk positief." } },
+            { id: "b", text: { en: "Lead aVR", nl: "Afleiding aVR" }, correct: true, rationale: { en: "aVR (−150°) looks from the right shoulder, opposite to the vector: negative P, QRS and T.", nl: "aVR (−150°) kijkt vanaf de rechterschouder, tegengesteld aan de vector: negatieve P, QRS en T." } },
+            { id: "c", text: { en: "Lead V6", nl: "Afleiding V6" }, correct: false, rationale: { en: "V6 sits at the left lateral wall, in line with the vector: tall R.", nl: "V6 ligt aan de linker laterale wand, in lijn met de vector: hoge R." } },
+            { id: "d", text: { en: "Lead aVF", nl: "Afleiding aVF" }, correct: false, rationale: { en: "aVF (+90°) is inferior and positive with a normal axis.", nl: "aVF (+90°) is inferieur en positief bij een normale as." } },
+          ],
+          explanation: { en: "Leads whose positive pole lies opposite the dipole record negative deflections. aVR is the only standard lead looking from the upper right, which is why a positive QRS in aVR is always abnormal (lead reversal, dextrocardia, VT).", nl: "Afleidingen waarvan de positieve pool tegenover de dipool ligt, registreren negatieve uitslagen. aVR is de enige standaardafleiding die vanaf rechtsboven kijkt; daarom is een positief QRS in aVR altijd abnormaal (elektrodeverwisseling, dextrocardie, VT)." },
+        } },
+      ],
+      review: authored([REFS.aha2009]),
+    },
+    {
+      id: "m01-l02",
+      slug: "paper-calibration-and-measurement",
+      level: 1,
+      estimatedMinutes: 15,
+      title: { en: "Paper, calibration and measurement", nl: "Papier, kalibratie en meten" },
+      summary: { en: "Turn millimetres into milliseconds and millivolts, and measure intervals reproducibly.", nl: "Zet millimeters om in milliseconden en millivolts, en meet intervallen reproduceerbaar." },
+      competencies: ["intervals", "rate-rhythm"],
+      objectives: [
+        { id: "o1", competency: "intervals", text: { en: "Convert grid squares to time and voltage at standard calibration (25 mm/s, 10 mm/mV).", nl: "Rasterhokjes omrekenen naar tijd en voltage bij standaardkalibratie (25 mm/s, 10 mm/mV)." } },
+        { id: "o2", competency: "rate-rhythm", text: { en: "Estimate heart rate with the 300-rule, the 1500-rule and the 10-second count.", nl: "De hartfrequentie schatten met de 300-regel, de 1500-regel en de 10-secondentelling." } },
+        { id: "o3", competency: "intervals", text: { en: "Measure PR, QRS, QT and compute QTc.", nl: "PR, QRS en QT meten en QTc berekenen." } },
+      ],
+      blocks: [
+        { type: "paragraph", text: {
+          en: "At standard calibration each small square is 1 mm: 40 ms horizontally and 0.1 mV vertically. A large square (5 mm) is 200 ms and 0.5 mV. A 10-second rhythm strip contains 50 large squares. Always check the calibration pulse: it should be 10 mm tall and 200 ms wide. Half-standard (5 mm/mV) is sometimes used for very high voltages; a 50 mm/s paper speed is common in some European countries and makes every interval look twice as long.",
+          nl: "Bij standaardkalibratie is elk klein hokje 1 mm: 40 ms horizontaal en 0,1 mV verticaal. Een groot hokje (5 mm) is 200 ms en 0,5 mV. Een ritmestrook van 10 seconden bevat 50 grote hokjes. Controleer altijd de kalibratiepuls: die moet 10 mm hoog en 200 ms breed zijn. Halve standaard (5 mm/mV) wordt soms gebruikt bij zeer hoge voltages; een papiersnelheid van 50 mm/s is gebruikelijk in sommige Europese landen en laat elk interval tweemaal zo lang lijken.",
+        } },
+        { type: "heading", text: { en: "Three ways to get the rate", nl: "Drie manieren om de frequentie te bepalen" } },
+        { type: "list", items: [
+          { en: "300-rule: count large squares between two R waves and divide 300 by that number (300, 150, 100, 75, 60, 50).", nl: "300-regel: tel de grote hokjes tussen twee R-toppen en deel 300 door dat getal (300, 150, 100, 75, 60, 50)." },
+          { en: "1500-rule: 1500 divided by the number of small squares — more precise for regular rhythms.", nl: "1500-regel: 1500 gedeeld door het aantal kleine hokjes — nauwkeuriger bij regelmatige ritmes." },
+          { en: "10-second count: number of QRS complexes on the rhythm strip × 6 — the only valid method for irregular rhythms.", nl: "10-secondentelling: aantal QRS-complexen op de ritmestrook × 6 — de enige geldige methode bij onregelmatige ritmes." },
+        ] },
+        { type: "heading", text: { en: "Intervals and their limits", nl: "Intervallen en hun grenzen" } },
+        { type: "table", header: [{ en: "Interval", nl: "Interval" }, { en: "Measure from–to", nl: "Meet van–tot" }, { en: "Normal", nl: "Normaal" }],
+          rows: [
+            [{ en: "PR", nl: "PR" }, { en: "P onset → QRS onset", nl: "Begin P → begin QRS" }, { en: "120–200 ms", nl: "120–200 ms" }],
+            [{ en: "QRS", nl: "QRS" }, { en: "First deflection → return to baseline (J point)", nl: "Eerste uitslag → terugkeer naar basislijn (J-punt)" }, { en: "< 120 ms (< 110 ms strictly)", nl: "< 120 ms (strikt < 110 ms)" }],
+            [{ en: "QT", nl: "QT" }, { en: "QRS onset → end of T (tangent method)", nl: "Begin QRS → einde T (tangentmethode)" }, { en: "QTc < 450 ms ♂, < 460 ms ♀", nl: "QTc < 450 ms ♂, < 460 ms ♀" }],
+          ] },
+        { type: "callout", tone: "key", title: { en: "QT correction", nl: "QT-correctie" }, text: {
+          en: "Bazett: QTc = QT / √RR (RR in seconds). It over-corrects at fast rates and under-corrects at slow rates; use Fridericia (QT / ∛RR) or Framingham outside 60–100/min. In bundle branch block the QT is inflated by the wide QRS — subtract the excess QRS duration or use the JT interval.",
+          nl: "Bazett: QTc = QT / √RR (RR in seconden). Overcorrigeert bij hoge en ondercorrigeert bij lage frequenties; gebruik Fridericia (QT / ∛RR) of Framingham buiten 60–100/min. Bij bundeltakblok wordt het QT opgeblazen door het brede QRS — trek de extra QRS-duur af of gebruik het JT-interval.",
+        } },
+        { type: "ecg", ecgId: "synth-normal-sinus", layout: "3x4+rhythm", caption: { en: "Practise with the calipers: measure PR, QRS and QT in lead II, then compute QTc. Expected values: ≈160 ms, ≈90 ms, QTc ≈400 ms.", nl: "Oefen met de passer: meet PR, QRS en QT in afleiding II en bereken QTc. Verwachte waarden: ≈160 ms, ≈90 ms, QTc ≈400 ms." } },
+        { type: "check", question: {
+          id: "m01-l02-q1", kind: "single", competency: "rate-rhythm", level: 1,
+          stem: { en: "On a 10-second strip you count 13 QRS complexes with clearly irregular RR intervals. What is the ventricular rate?", nl: "Op een strook van 10 seconden telt u 13 QRS-complexen met duidelijk onregelmatige RR-intervallen. Wat is de kamerfrequentie?" },
+          options: [
+            { id: "a", text: { en: "About 65/min", nl: "Ongeveer 65/min" }, correct: false },
+            { id: "b", text: { en: "About 78/min", nl: "Ongeveer 78/min" }, correct: true, rationale: { en: "13 × 6 = 78/min. For irregular rhythms only the 10-second count is reliable.", nl: "13 × 6 = 78/min. Bij onregelmatige ritmes is alleen de 10-secondentelling betrouwbaar." } },
+            { id: "c", text: { en: "About 100/min", nl: "Ongeveer 100/min" }, correct: false },
+            { id: "d", text: { en: "Cannot be determined on an irregular rhythm", nl: "Niet te bepalen bij een onregelmatig ritme" }, correct: false },
+          ],
+          explanation: { en: "Multiply the number of complexes on a 10-second strip by six. The 300- and 1500-rules assume a regular rhythm.", nl: "Vermenigvuldig het aantal complexen op een strook van 10 seconden met zes. De 300- en 1500-regel gaan uit van een regelmatig ritme." },
+        } },
+      ],
+      review: authored(),
+    },
+    {
+      id: "m01-l03",
+      slug: "systematic-interpretation",
+      level: 1,
+      estimatedMinutes: 25,
+      title: { en: "The systematic approach", nl: "De systematische benadering" },
+      summary: { en: "A fixed reading order that catches the dangerous findings and produces a structured report.", nl: "Een vaste leesvolgorde die de gevaarlijke bevindingen opspoort en een gestructureerd verslag oplevert." },
+      competencies: ["systematic-approach", "rate-rhythm", "axis", "intervals"],
+      objectives: [
+        { id: "o1", competency: "systematic-approach", text: { en: "Apply the six-step sequence: rate, rhythm, axis, intervals, morphology, conclusion.", nl: "De zesstappenvolgorde toepassen: frequentie, ritme, as, intervallen, morfologie, conclusie." } },
+        { id: "o2", competency: "rate-rhythm", text: { en: "Confirm or refute sinus rhythm with three criteria.", nl: "Sinusritme bevestigen of verwerpen met drie criteria." } },
+        { id: "o3", competency: "axis", text: { en: "Classify the axis as normal, left, right or extreme using leads I, II and aVF.", nl: "De as classificeren als normaal, links, rechts of extreem met afleidingen I, II en aVF." } },
+      ],
+      blocks: [
+        { type: "callout", tone: "key", title: { en: "The order never changes", nl: "De volgorde verandert nooit" }, text: {
+          en: "Rate → Rhythm → Axis → Intervals (PR, QRS, QT) → Morphology (P, QRS, ST, T, U; lead by lead, territory by territory) → Conclusion and clinical context. Experienced readers see the diagnosis at a glance; the sequence exists so you still find the second diagnosis.",
+          nl: "Frequentie → Ritme → As → Intervallen (PR, QRS, QT) → Morfologie (P, QRS, ST, T, U; afleiding voor afleiding, gebied voor gebied) → Conclusie en klinische context. Ervaren beoordelaars zien de diagnose in één oogopslag; de volgorde bestaat om ook de tweede diagnose te vinden.",
+        } },
+        { type: "heading", text: { en: "Rhythm: is it sinus?", nl: "Ritme: is het sinus?" } },
+        { type: "list", items: [
+          { en: "A P wave before every QRS and a QRS after every P.", nl: "Een P vóór elk QRS en een QRS na elke P." },
+          { en: "P upright in I and II, negative in aVR (the sinus node is high in the right atrium).", nl: "P positief in I en II, negatief in aVR (de sinusknoop ligt hoog in het rechter atrium)." },
+          { en: "Constant PR interval and constant P morphology.", nl: "Constant PR-interval en constante P-morfologie." },
+        ] },
+        { type: "heading", text: { en: "Axis in ten seconds", nl: "De as in tien seconden" } },
+        { type: "table", header: [{ en: "Lead I", nl: "Afleiding I" }, { en: "Lead aVF", nl: "Afleiding aVF" }, { en: "Lead II", nl: "Afleiding II" }, { en: "Axis", nl: "As" }],
+          rows: [
+            [{ en: "+", nl: "+" }, { en: "+", nl: "+" }, { en: "+", nl: "+" }, { en: "Normal (0° to +90°)", nl: "Normaal (0° tot +90°)" }],
+            [{ en: "+", nl: "+" }, { en: "−", nl: "−" }, { en: "+", nl: "+" }, { en: "Normal, leftward (0° to −30°)", nl: "Normaal, naar links (0° tot −30°)" }],
+            [{ en: "+", nl: "+" }, { en: "−", nl: "−" }, { en: "−", nl: "−" }, { en: "Left axis deviation (−30° to −90°)", nl: "Linker asdeviatie (−30° tot −90°)" }],
+            [{ en: "−", nl: "−" }, { en: "+", nl: "+" }, { en: "±", nl: "±" }, { en: "Right axis deviation (+90° to +180°)", nl: "Rechter asdeviatie (+90° tot +180°)" }],
+            [{ en: "−", nl: "−" }, { en: "−", nl: "−" }, { en: "−", nl: "−" }, { en: "Extreme axis (−90° to ±180°)", nl: "Extreme as (−90° tot ±180°)" }],
+          ] },
+        { type: "paragraph", text: {
+          en: "For a more precise estimate find the limb lead with the most isoelectric (equiphasic) QRS: the axis is perpendicular to it, in the direction of the lead with the tallest R wave.",
+          nl: "Voor een preciezere schatting zoekt u de extremiteitsafleiding met het meest iso-elektrische (equifasische) QRS: de as staat daar loodrecht op, in de richting van de afleiding met de hoogste R." } },
+        { type: "heading", text: { en: "Morphology by territory", nl: "Morfologie per gebied" } },
+        { type: "paragraph", text: {
+          en: "Group the leads anatomically — inferior (II, III, aVF), lateral (I, aVL, V5, V6), septal (V1, V2), anterior (V3, V4) — and look for Q waves, ST deviation and T-wave changes that cluster in a territory. Compare the ST segment with the TP segment, not with the PR segment, when PR depression is possible.",
+          nl: "Groepeer de afleidingen anatomisch — inferieur (II, III, aVF), lateraal (I, aVL, V5, V6), septaal (V1, V2), anterieur (V3, V4) — en zoek naar Q-golven, ST-deviatie en T-topveranderingen die zich in een gebied concentreren. Vergelijk het ST-segment met het TP-segment, niet met het PR-segment, wanneer PR-depressie mogelijk is.",
+        } },
+        { type: "callout", tone: "clinical", title: { en: "The report", nl: "Het verslag" }, text: {
+          en: "A structured report states: rate; rhythm; axis; PR/QRS/QTc; findings per territory; conclusion with a clinical question answered ('no evidence of acute ischaemia', 'new LBBB compared with 2024'). This platform's interpretation form follows exactly this structure.",
+          nl: "Een gestructureerd verslag vermeldt: frequentie; ritme; as; PR/QRS/QTc; bevindingen per gebied; conclusie met beantwoording van de klinische vraag ('geen aanwijzingen voor acute ischemie', 'nieuw LBTB vergeleken met 2024'). Het interpretatieformulier van dit platform volgt precies deze structuur.",
+        } },
+        { type: "ecg", ecgId: "ptbxl-00010", layout: "3x4+rhythm", caption: { en: "Apply the six steps to this tracing before opening the key in the library.", nl: "Pas de zes stappen toe op deze registratie voordat u de sleutel in de bibliotheek opent." } },
+        { type: "check", question: {
+          id: "m01-l03-q1", kind: "single", competency: "axis", level: 1,
+          stem: { en: "Lead I is positive, lead aVF is negative and lead II is negative. What is the axis?", nl: "Afleiding I is positief, aVF negatief en II negatief. Wat is de as?" },
+          options: [
+            { id: "a", text: { en: "Normal", nl: "Normaal" }, correct: false, rationale: { en: "A negative lead II places the axis beyond −30°.", nl: "Een negatieve afleiding II plaatst de as voorbij −30°." } },
+            { id: "b", text: { en: "Left axis deviation", nl: "Linker asdeviatie" }, correct: true, rationale: { en: "I positive, aVF negative, II negative: between −30° and −90°.", nl: "I positief, aVF negatief, II negatief: tussen −30° en −90°." } },
+            { id: "c", text: { en: "Right axis deviation", nl: "Rechter asdeviatie" }, correct: false },
+            { id: "d", text: { en: "Extreme axis", nl: "Extreme as" }, correct: false, rationale: { en: "Extreme axis requires lead I to be negative as well.", nl: "Een extreme as vereist dat ook afleiding I negatief is." } },
+          ],
+          explanation: { en: "Lead II separates 'leftward but normal' (II positive) from true left axis deviation (II negative).", nl: "Afleiding II maakt het onderscheid tussen 'naar links maar normaal' (II positief) en echte linker asdeviatie (II negatief)." },
+        } },
+      ],
+      review: authored(),
+    },
+  ],
+};

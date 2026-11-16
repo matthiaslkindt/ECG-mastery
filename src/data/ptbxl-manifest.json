@@ -1,0 +1,206 @@
+[
+  {
+    "key": "norm-1",
+    "id": "ptbxl-00003",
+    "ecgId": 3,
+    "file": "/ecg/ptbxl/ptbxl-00003.json"
+  },
+  {
+    "key": "norm-2",
+    "id": "ptbxl-00010",
+    "ecgId": 10,
+    "file": "/ecg/ptbxl/ptbxl-00010.json"
+  },
+  {
+    "key": "sbrad",
+    "id": "ptbxl-00002",
+    "ecgId": 2,
+    "file": "/ecg/ptbxl/ptbxl-00002.json"
+  },
+  {
+    "key": "stach",
+    "id": "ptbxl-00698",
+    "ecgId": 698,
+    "file": "/ecg/ptbxl/ptbxl-00698.json"
+  },
+  {
+    "key": "sarrh",
+    "id": "ptbxl-00037",
+    "ecgId": 37,
+    "file": "/ecg/ptbxl/ptbxl-00037.json"
+  },
+  {
+    "key": "afib",
+    "id": "ptbxl-04117",
+    "ecgId": 4117,
+    "file": "/ecg/ptbxl/ptbxl-04117.json"
+  },
+  {
+    "key": "aflt",
+    "id": "ptbxl-00023",
+    "ecgId": 23,
+    "file": "/ecg/ptbxl/ptbxl-00023.json"
+  },
+  {
+    "key": "1avb",
+    "id": "ptbxl-02509",
+    "ecgId": 2509,
+    "file": "/ecg/ptbxl/ptbxl-02509.json"
+  },
+  {
+    "key": "2avb",
+    "id": "ptbxl-18101",
+    "ecgId": 18101,
+    "file": "/ecg/ptbxl/ptbxl-18101.json"
+  },
+  {
+    "key": "3avb",
+    "id": "ptbxl-04827",
+    "ecgId": 4827,
+    "file": "/ecg/ptbxl/ptbxl-04827.json"
+  },
+  {
+    "key": "clbbb",
+    "id": "ptbxl-00286",
+    "ecgId": 286,
+    "file": "/ecg/ptbxl/ptbxl-00286.json"
+  },
+  {
+    "key": "crbbb",
+    "id": "ptbxl-00621",
+    "ecgId": 621,
+    "file": "/ecg/ptbxl/ptbxl-00621.json"
+  },
+  {
+    "key": "lafb",
+    "id": "ptbxl-00041",
+    "ecgId": 41,
+    "file": "/ecg/ptbxl/ptbxl-00041.json"
+  },
+  {
+    "key": "imi",
+    "id": "ptbxl-00290",
+    "ecgId": 290,
+    "file": "/ecg/ptbxl/ptbxl-00290.json"
+  },
+  {
+    "key": "ami",
+    "id": "ptbxl-15865",
+    "ecgId": 15865,
+    "file": "/ecg/ptbxl/ptbxl-15865.json"
+  },
+  {
+    "key": "asmi",
+    "id": "ptbxl-00177",
+    "ecgId": 177,
+    "file": "/ecg/ptbxl/ptbxl-00177.json"
+  },
+  {
+    "key": "ilmi",
+    "id": "ptbxl-00947",
+    "ecgId": 947,
+    "file": "/ecg/ptbxl/ptbxl-00947.json"
+  },
+  {
+    "key": "lvh",
+    "id": "ptbxl-00138",
+    "ecgId": 138,
+    "file": "/ecg/ptbxl/ptbxl-00138.json"
+  },
+  {
+    "key": "rvh",
+    "id": "ptbxl-02417",
+    "ecgId": 2417,
+    "file": "/ecg/ptbxl/ptbxl-02417.json"
+  },
+  {
+    "key": "lae",
+    "id": "ptbxl-06685",
+    "ecgId": 6685,
+    "file": "/ecg/ptbxl/ptbxl-06685.json"
+  },
+  {
+    "key": "wpw",
+    "id": "ptbxl-02145",
+    "ecgId": 2145,
+    "file": "/ecg/ptbxl/ptbxl-02145.json"
+  },
+  {
+    "key": "pvc",
+    "id": "ptbxl-00219",
+    "ecgId": 219,
+    "file": "/ecg/ptbxl/ptbxl-00219.json"
+  },
+  {
+    "key": "bigu",
+    "id": "ptbxl-04637",
+    "ecgId": 4637,
+    "file": "/ecg/ptbxl/ptbxl-04637.json"
+  },
+  {
+    "key": "pac",
+    "id": "ptbxl-04478",
+    "ecgId": 4478,
+    "file": "/ecg/ptbxl/ptbxl-04478.json"
+  },
+  {
+    "key": "pace",
+    "id": "ptbxl-00144",
+    "ecgId": 144,
+    "file": "/ecg/ptbxl/ptbxl-00144.json"
+  },
+  {
+    "key": "psvt",
+    "id": "ptbxl-02051",
+    "ecgId": 2051,
+    "file": "/ecg/ptbxl/ptbxl-02051.json"
+  },
+  {
+    "key": "lngqt",
+    "id": "ptbxl-00320",
+    "ecgId": 320,
+    "file": "/ecg/ptbxl/ptbxl-00320.json"
+  },
+  {
+    "key": "irbbb",
+    "id": "ptbxl-00709",
+    "ecgId": 709,
+    "file": "/ecg/ptbxl/ptbxl-00709.json"
+  },
+  {
+    "key": "iscal",
+    "id": "ptbxl-00167",
+    "ecgId": 167,
+    "file": "/ecg/ptbxl/ptbxl-00167.json"
+  },
+  {
+    "key": "iscin",
+    "id": "ptbxl-09718",
+    "ecgId": 9718,
+    "file": "/ecg/ptbxl/ptbxl-09718.json"
+  },
+  {
+    "key": "injas",
+    "id": "ptbxl-04175",
+    "ecgId": 4175,
+    "file": "/ecg/ptbxl/ptbxl-04175.json"
+  },
+  {
+    "key": "injal",
+    "id": "ptbxl-01812",
+    "ecgId": 1812,
+    "file": "/ecg/ptbxl/ptbxl-01812.json"
+  },
+  {
+    "key": "pmi",
+    "id": "ptbxl-15059",
+    "ecgId": 15059,
+    "file": "/ecg/ptbxl/ptbxl-15059.json"
+  },
+  {
+    "key": "el",
+    "id": "ptbxl-16101",
+    "ecgId": 16101,
+    "file": "/ecg/ptbxl/ptbxl-16101.json"
+  }
+]
